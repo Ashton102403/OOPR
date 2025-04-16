@@ -1,0 +1,20 @@
+cd \xampp\bin\mysql
+
+mysql -u root
+
+create database ToDoList;
+
+use ToDoList;
+
+CREATE TABLE users (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(50)
+);
+
+CREATE TABLE task (
+    taskID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    taskTitle VARCHAR(255),
+    taskDescription VARCHAR(255),
+    taskDeadline DATE,
+);
